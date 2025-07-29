@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eks-app                     # Name of the Deployment
+spec:
+  replicas: 2                       # Run 2 pods
+  selector:
+    matchLabels:
+      app: eks-app                  # Pods must have label app=eks-app
+  template:
+    metadata:
+      labels:
+        app: eks-app                # Label applied to pods created
+    spec:
+      containers:
+      - name: eks-app
+        image: 418295713466.dkr.ecr.ap-south-1.amazonaws.com/eks-app:latest   # Your Docker image in ECR
+        ports:
+        - containerPort: 5000    

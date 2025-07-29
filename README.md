@@ -22,7 +22,7 @@ This project shows how to:
 
 ## 🚀 Step-by-Step Deployment
 
-### 1️⃣ Create EKS Cluster
+1️⃣ Create EKS Cluster
 
 Using eksctl:
 ```bash
